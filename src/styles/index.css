@@ -1,0 +1,16 @@
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  transition: background-color .33s ease-in-out;
+  background-image: url(https://img.emlasts.com/funnel/v1/img/bgd4.png);
+  background-image: url(https://img.emlasts.com/funnel/v1/webp/bgd4.webp);
+  background-repeat: no-repeat;
+  background-position: top center;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
