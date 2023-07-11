@@ -28,7 +28,7 @@ const Frontpage = () => {
               title="SVG icon for pleasant user experience"
               type="image/svg+xml"
               role="presentation"
-              data="https://www.247loanpros.com/template/5190/SSL.svg"
+              data="https://server1.jointdivisoncxvii.me/templates/SSL.svg"
             ></object>
           </div>
           <p
@@ -96,7 +96,7 @@ const Frontpage = () => {
                           type="image/svg+xml"
                           role="presentation"
                           style={{ maxHeight: 50 + "px" }}
-                          data="https://www.247loanpros.com/template/5190/info-icon-default.svg"
+                          data="https://server1.jointdivisoncxvii.me/templates/info-icon-default.svg"
                         ></object>
                       </div>
                     </span>
@@ -115,7 +115,7 @@ const Frontpage = () => {
                       title="SVG icon for pleasant user experience"
                       type="image/svg+xml"
                       role="presentation"
-                      data="https://www.247loanpros.com/template/5190/hero_content.svg"
+                      data="https://server1.jointdivisoncxvii.me/templates/hero_content.svg"
                       style={{ maxHeight: 500 + "px" }}
                     ></object>
                   </span>

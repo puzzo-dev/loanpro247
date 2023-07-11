@@ -54,13 +54,13 @@ function Footer() {
       </div>
       <div className="col-lg-5 text-start my-4 fs-6 text-muted">
         <small>
-          247loanpros.com is run by DV Marketing Inc. Address: 759 Bloomfield
+          247loanpros.site is run by DV Marketing Inc. Address: 759 Bloomfield
           Ave. Suite 244, West Caldwell, NJ 07006
           <p className="my-3">
-            Telephone Number: (213) 348-6889 <br /> Email Address:
-            info@247loanpros.com
+            Telephone Number: (213) 348-loan <br /> Email Address:
+            loans@247loanpro.site
           </p>
-          Copyright © 2015 - 2023 247loanpros.com - all rights reserved
+          Copyright © 2015 - 2023 247loanpros.site - all rights reserved
         </small>
       </div>
       <div className="text-center fs-6 text-muted p-lg-4">
