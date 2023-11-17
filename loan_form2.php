@@ -1,5 +1,5 @@
 <?php
-header("Access-Control-Allow-Origin: *");
+// header("Access-Control-Allow-Origin: *");
 header('Access-Control-Allow-Methods: GET, POST, OPTIONS');
 header("Access-Control-Allow-Headers: Content-Type, Authorization");
 if ($_SERVER["REQUEST_METHOD"] === "POST") {
@@ -53,11 +53,11 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
 
     // Send email
     $headers = "From: bjvcompanies@server1.jointdivisoncxvii.me\r\n";
-    $message = "We have received your application and it is currently being reviewed by our team.\r\n
-            We acknowledge the importance of your request and assure you that we will process your application as soon as possible. If we require any additional information or documentation from you, we will reach out to you promptly.\r\n
-            Feel free to contact our customer support team at loans@247loanpro.site. We are here to assist you.\r\n
-            Thank you for choosing our services. We appreciate your trust and look forward to assisting you with your loan application.\r\n
-            247 Loan Pro\r\n";
+    $message = "We have received your application and it is currently being reviewed by our team.\r\n" .
+        "We acknowledge the importance of your request and assure you that we will process your application as soon as possible. If we require any additional information or documentation from you, we will reach out to you promptly.\r\n" .
+        "Feel free to contact our customer support team at loans@247loanpro.site. We are here to assist you.\r\n" .
+        "Thank you for choosing our services. We appreciate your trust and look forward to assisting you with your loan application.\r\n" .
+        "247 Loan Pro\r\n";
 
     // Format the message for JSON entry
     $confirmation = base64_encode($message);
