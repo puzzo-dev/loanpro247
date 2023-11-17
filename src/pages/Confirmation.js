@@ -9,7 +9,7 @@ function Confirmation() {
   //   return <div>Not Found</div>;
   // }
   const message = atob(queryParams.get("message"));
-
+  // console.log(message);
   return (
     <div className="row container-fluid">
       <div className="col-12 p-lg-5 mx-auto">

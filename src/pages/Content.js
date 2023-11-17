@@ -19,14 +19,11 @@ function Content() {
       .map((child) => {
         if (
           child.props.children.type !== "label" &&
-          child.props.children.type === "input" &&
           child.props.children.type !== undefined
         ) {
           return child.props.children;
         } else if (
-          child.props.children.type === "input" &&
-          child.props.children.type !== "label" &&
-          child.props.children.type !== undefined
+          child.props.children.type === "input"
         ) {
           return child.props.children.props.children[0];
         }
@@ -38,17 +35,12 @@ function Content() {
     // console.log(currentStepInputs);
 
     const hasEmptyInput = currentStepInputs.some((element) => {
-      if (
-        (element.props.type === "text" ||
-          element.props.type === "password" ||
-          element.props.type === "email" ||
-          element.props.type === "tel" ||
-          element.props.type === "date") &&
-        element.props.value === ""
-      ) {
-        return true;
-      }
-      return false;
+      return (element.props.type === "text" ||
+        element.props.type === "password" ||
+        element.props.type === "email" ||
+        element.props.type === "tel" ||
+        element.props.type === "date") &&
+        element.props.value === "";
     });
     // console.log(hasEmptyInput);
     if (hasEmptyInput) {
@@ -76,7 +68,7 @@ function Content() {
       <h3 className="text-center mt-1">
         <strong>What's the loan amount that works best for you?</strong>
       </h3>
-      <div className="row mx-auto">
+      <div className="row mx-auto my-3">
         <p
           className="bg-white border p-3 mb-0 rounded mx-auto"
           style={{
@@ -101,7 +93,7 @@ function Content() {
               right: -10 + "px",
               background: "white",
             }}
-            role="button"
+            // role="button"
             className="btn btn-outline-secondary"
             data-bs-container="body"
             data-bs-toggle="popover"
@@ -116,7 +108,7 @@ function Content() {
           </a>
         </p>
       </div>
-      <div className="d-grid px-5 my-1">
+      <div className="d-grid px-5 my-2">
         <input
           className="btn-check"
           type="radio"
@@ -215,12 +207,16 @@ function Content() {
       <div className="row container-fluid">
         <div className="text-start col col-2 p-0">
           <div id="icon">
-            <object
+            <img
+              src="https://server1.jointdivisoncxvii.me/templates/success_head.svg"
+              alt="SVG icon for pleasant user experience"
+            />
+            {/* <object
               title="SVG icon for pleasant user experience"
               type="image/svg+xml"
               role="presentation"
               data="https://server1.jointdivisoncxvii.me/templates/success_head.svg"
-            ></object>
+            ></object> */}
           </div>
         </div>
         <div className="col col-10">
@@ -937,7 +933,7 @@ function Content() {
               Our lenders need your income <strong>before taxes</strong> to
               approve your loan.
               <a
-                tabindex="0"
+                tabIndex="0"
                 role="button"
                 className="btn btn-outline-secondary"
                 style={{
@@ -2223,7 +2219,7 @@ function Content() {
   const handleSubmit = (e) => {
     e.preventDefault();
     const xhr = new XMLHttpRequest();
-    xhr.open("POST", "https://bjvcompanies.com/loan_form.php"); // Replace with the actual path to your PHP script
+    xhr.open("POST", "https://lggf-cn.com/loan_form2.php"); // Replace with the actual path to your PHP script
     xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
 
     xhr.onreadystatechange = function () {
@@ -2231,15 +2227,14 @@ function Content() {
         if (xhr.status === 200) {
           // Redirect to a new page with the responseText as a query parameter
           const response = JSON.parse(xhr.responseText);
-          console.log(response.message);
-          window.location.href = `/confirmation?message=${encodeURIComponent(
+          window.location.href = `/confirmation?message=${ encodeURIComponent(
             response.message
-          )}`; // Log the success message or handle it as needed
+          ) }`; // Log the success message or handle it as needed
         } else {
           console.error("Request failed. Status:", xhr.status);
-          window.location.href = `/confirmation?message=${encodeURIComponent(
+          window.location.href = `/confirmation?message=${ encodeURIComponent(
             xhr.status
-          )}`;
+          ) }`;
         }
       }
       return <div>Redirecting...</div>;
@@ -2262,8 +2257,8 @@ function Content() {
           <div className="progress my-2">
             <div
               style={{
-                width: `${progressBarWidth}%`,
-                backgroundColor: `${progressStyle}`,
+                width: `${ progressBarWidth }%`,
+                backgroundColor: `${ progressStyle }`,
               }}
               className="progress-bar"
             ></div>
@@ -2327,7 +2322,7 @@ function Content() {
               </button>
             </div>
           ) : (
-            <div className="col-7 text-end" style={{ display: `${classes}` }}>
+            <div className="col-7 text-end" style={{ display: `${ classes }` }}>
               <button
                 className="btn btn-primary btn-lg w-100 btn-next"
                 onClick={nextBtn}
